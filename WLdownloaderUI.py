@@ -125,7 +125,7 @@ def start_download():
                 print("Total elapsed time :", round(tempsecoule, 2), "s")
 
                 if float(percentagedown2) >= 99.9:
-                    print("\nAll downloads are complete.\n")
+                    show_complete_message()
                 else:
                     print("Estimated remaining time :", format_time(tempsrestant))
 
