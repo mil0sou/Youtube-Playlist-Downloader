@@ -5,6 +5,9 @@ import webbrowser
 from tkinter import filedialog, messagebox, ttk
 from pytube import Playlist
 from pathlib import Path
+import ssl
+
+ssl._create_default_https_context = ssl._create_stdlib_context
 
 
 def show_complete_message():
@@ -31,8 +34,8 @@ def format_time(seconds):
 
 root = tk.Tk()
 root.title("YouTube Playlist Downloader by Milo")
-icon = tk.PhotoImage(file="D:\Code\WLdownloader\cat.png")
-root.iconphoto(False, icon)
+# icon = tk.PhotoImage(file="D:\Code\WLdownloader\cat.png")
+# root.iconphoto(False, icon)
 root.geometry("600x330")
 
 tk.Label(root, text="").pack()
